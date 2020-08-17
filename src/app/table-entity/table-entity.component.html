@@ -1,23 +1,21 @@
-<div>
-	<table style="width:100%">
-		<ng-container *ngFor="let item of data; let i = index">
-			<tr>
-				<td>
-					<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<table class="container">
+	<ng-container *ngFor="let item of data; let i = index">
+		<tr class="row">
+			<td>
+				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
       </td>
-				<td>
-					<span>{{item.name}}</span>
-					<select id="cars">
+			<td>
+				<span>{{item.name}}</span>
+				<select id="cars">
           <option value="volvo">This week</option>
           <option value="saab">this month</option>
           <option value="opel">last 30 days</option>
           <option value="audi">all time</option>
         </select>
-				</td>
-				<td>Views</td>
-				<td>Submissions</td>
-				<td>{{item.createdAt | dateTime}}</td>
-			</tr>
-		</ng-container>
-	</table>
-</div>
+			</td>
+			<td>Views</td>
+			<td>Submissions</td>
+			<td>{{item.createdAt | dateTime}}</td>
+		</tr>
+	</ng-container>
+</table>

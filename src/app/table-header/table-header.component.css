@@ -1,3 +1,36 @@
 .container{
-  padding: 0 50px 0px 50px;
+    padding: 0 50px 0px 50px;
+    background: #F8F8FA;
+    border-radius: 10px;
+    width: 1046px;
+    height: 69px;
+    box-sizing: border-box;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.container .row{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+.row .col2{
+  margin-left: 32px;
+}
+
+.row .col3{
+  margin-left: 412px;
+}
+
+.row .col4{
+  margin-left: 96px;
+}
+
+.row .col5{
+  margin-left: 85px;
 }
