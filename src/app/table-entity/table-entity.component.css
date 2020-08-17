@@ -1,9 +1,35 @@
 .container{
-  padding: 0 50px 0px 50px;
-  border-radius: 10px;
-  width: 1046px;
+    padding: 0 50px 0px 50px;
+    border-radius: 10px;
+    width: 1046px;
+    box-sizing: border-box;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 50px;
 }
-.row{
+.container .row{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 100%;
   height: 69px;
-  padding: 0 50px 0px 50px;
+}
+
+.row .col2{
+  margin-left: 32px;
+}
+
+.row .col3{
+  margin-left: 412px;
+}
+
+.row .col4{
+  margin-left: 96px;
+}
+
+.row .col5{
+  margin-left: 85px;
 }
