@@ -1,10 +1,10 @@
 <div class="container">
 	<div class="row" *ngFor="let item of data; let i = index">
 		<div class="row">
-			<div class="col1">
+			<div class="col col1">
 				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         </div>
-				<div class="col2">
+				<div class="col col2">
 					<span>{{item.name}}</span>
 					<select id="cars">
               <option value="volvo">This week</option>
@@ -13,13 +13,13 @@
               <option value="audi">all time</option>
             </select>
 				</div>
-				<div class="col3">
+				<div class="col col3">
 					<span>Views</span>
 				</div>
-				<div class="col4">
+				<div class="col col4">
 					<span>Submissions</span>
 				</div>
-				<div class="col5">
+				<div class="col col5">
 					<span>{{item.createdAt | dateTime}}</span>
 				</div>
 			</div>

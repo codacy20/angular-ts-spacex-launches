@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 50px;
+    position: relative;
 }
 
 .container .row{
@@ -19,18 +20,25 @@
   width: 100%;
 }
 
+.col{
+  position: absolute;
+}
+.row .col1{
+  left: 23px;
+}
+
 .row .col2{
-  margin-left: 32px;
+  left: 75px;
 }
 
 .row .col3{
-  margin-left: 412px;
+  left: 579px;
 }
 
-.row .col4{
-  margin-left: 96px;
-}
+.row .col4{ 
+  left:672px;
+}  
 
 .row .col5{
-  margin-left: 85px;
+  left: 855px;
 }
