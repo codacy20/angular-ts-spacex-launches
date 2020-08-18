@@ -32,6 +32,10 @@
   display:flex; 
 }
 
+.open .material-icons{
+  transform: rotate(180deg);
+}
+
 .row{
   cursor: pointer;
   border-radius: 3px;
