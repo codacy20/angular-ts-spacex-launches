@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { CapsulesServiceService } from "./../user-service.service";
-import { Capsules } from "./../capsules";
+import { RocketService } from "./../rocket.service";
+import { Rocket } from "./../rocket";
 
 @Component({
   selector: "app-table-entity",
@@ -8,12 +8,12 @@ import { Capsules } from "./../capsules";
   styleUrls: ["./table-entity.component.css"]
 })
 export class TableEntityComponent implements OnInit {
-  data: Capsules[] = [];
-  constructor(private capsulesService: CapsulesServiceService) {}
+  data: Rocket[] = [];
+  constructor(private capsulesService: RocketService) {}
 
   ngOnInit() {
     const res = this.capsulesService.getCapsulesList();
-    res.subscribe((data: Capsules[]) => {
+    res.subscribe((data: Rocket[]) => {
       this.data = data;
     });
   }

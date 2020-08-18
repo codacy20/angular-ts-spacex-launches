@@ -1,20 +1,20 @@
 <div class="container">
-	<div class="row" *ngFor="let item of data; let i = index">
+	<div class="row" *ngFor="let item of data | slice:0:6; let i = index">
 		<div class="col col1">
 			<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         </div>
 			<div class="col col2">
-				<span>{{item.capsule_id}}</span>
+				<span>{{item.rocket_name}}</span>
 				<app-drop-down class="dropdown"></app-drop-down>
 			</div>
 			<div class="col col3">
-				<span>Views</span>
+				<span>{{item.success_rate_pct}}</span>
 			</div>
 			<div class="col col4">
-				<span>Submissions</span>
+				<span>{{item.cost_per_launch}}</span>
 			</div>
 			<div class="col col5">
-				<span>{{item.original_launch | dateTime}}</span>
+				<span>{{item.first_flight | dateTime}}</span>
 			</div>
 		</div>
 	</div>
