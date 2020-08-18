@@ -10,10 +10,11 @@ import { TableEntityComponent } from './table-entity/table-entity.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { DateTimePipe } from './date-time.pipe';
 import { UserServiceService } from './user-service.service';
+import { DropDownComponent } from './drop-down/drop-down.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, TableComponent, FilterComponent, TableHeaderComponent, TableEntityComponent, PaginationComponent, DateTimePipe ],
+  declarations: [ AppComponent, TableComponent, FilterComponent, TableHeaderComponent, TableEntityComponent, PaginationComponent, DateTimePipe, DropDownComponent ],
   bootstrap:    [ AppComponent ],
   providers: [UserServiceService]
 })

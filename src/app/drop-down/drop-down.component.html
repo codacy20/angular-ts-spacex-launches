@@ -1,0 +1,13 @@
+<div class="wrapper">
+	<div class="container" (click)="toggle()">
+		<span>Actions</span>
+		<span class="material-icons">
+    expand_more
+  </span>
+	</div>
+	<div class="active-container" [ngClass]='{"open":active}'>
+		<div class="row" *ngFor="let item of data; let i = index" (click)="clicked(i)">
+			<span>{{item.name}}</span>
+		</div>
+	</div>
+</div>
