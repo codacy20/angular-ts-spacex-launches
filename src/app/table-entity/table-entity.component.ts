@@ -9,7 +9,7 @@ import { Launch } from "./../launch";
 })
 export class TableEntityComponent implements OnInit {
   data: Launch[] = [];
-  offset = 106;
+  offset = 0;
   limit = 5;
   constructor(private launchService: LaunchService) {}
 
@@ -17,6 +17,8 @@ export class TableEntityComponent implements OnInit {
     const res = this.launchService.getLaunchList(this.offset, this.limit);
     res.subscribe((data: Launch[]) => {
       this.data = data;
+      this.launchService.nrOfFlights.next(this.data[0].flight_number);
+      // this.launchService.nrOfFlights.next(4);
     });
   }
 }
