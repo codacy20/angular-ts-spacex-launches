@@ -4,17 +4,17 @@
 			<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         </div>
 			<div class="col col2">
-				<span>{{item.rocket_name}}</span>
+				<span>{{item.mission_name}}</span>
 				<app-drop-down class="dropdown"></app-drop-down>
 			</div>
 			<div class="col col3">
-				<span>{{item.success_rate_pct}}</span>
+				<span>{{item.rocket.rocket_name}}</span>
 			</div>
 			<div class="col col4">
-				<span>{{item.cost_per_launch}}</span>
+				<span>{{item.launch_success ? 'yes' : 'no'}}</span>
 			</div>
 			<div class="col col5">
-				<span>{{item.first_flight | dateTime}}</span>
+				<span>{{item.launch_date_utc | dateTime}}</span>
 			</div>
 		</div>
 	</div>
