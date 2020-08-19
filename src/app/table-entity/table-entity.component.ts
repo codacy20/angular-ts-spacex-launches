@@ -11,6 +11,7 @@ export class TableEntityComponent implements OnInit {
   data: Launch[] = [];
   offset = 0;
   limit = 5;
+  active = null;
   constructor(private launchService: LaunchService) {}
 
   ngOnInit() {
@@ -23,4 +24,14 @@ export class TableEntityComponent implements OnInit {
       this.data = item;
     });
   }
+
+  mouseEnter(input : any){
+      this.active = input;
+      console.log(this.active)
+   }
+
+   mouseLeave(input : any){
+      this.active = null;     
+      console.log(this.active)
+   }
 }

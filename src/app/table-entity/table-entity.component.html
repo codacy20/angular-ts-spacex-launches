@@ -1,11 +1,14 @@
 <div class="container">
-	<div class="row" *ngFor="let item of data | slice:0:6; let i = index">
+	<div class="row" *ngFor="let item of data | slice:0:6; let i = index" id="{{i}}" (mouseenter)="mouseEnter(i)"
+		(mouseleave)="mouseLeave(i)">
 		<div class="col col1">
 			<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         </div>
 			<div class="col col2">
 				<span>{{item.mission_name}}</span>
-				<app-drop-down class="dropdown"></app-drop-down>
+				<ng-container *ngIf="active===i">
+					<app-drop-down class="dropdown" title="Actions" input="1"></app-drop-down>
+				</ng-container>
 			</div>
 			<div class="col col3">
 				<span>{{item.rocket.rocket_name}}</span>
