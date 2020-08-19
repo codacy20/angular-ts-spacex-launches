@@ -1,4 +1,4 @@
-export interface Rocket {
+export interface Launch {
   id: number;
   active: boolean;
   rocket_name: string;
