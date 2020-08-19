@@ -1,110 +1,131 @@
 export interface Launch {
-  id: number;
-  active: boolean;
-  rocket_name: string;
-  first_flight: Date;
-  cost_per_launch: number;
-  success_rate_pct: number;
+  flight_number: number;
+  mission_name: string;
+  launch_date_utc: Date;
+  rocket: Rocket;
+  launch_site: LaunchSite;
+  launch_success: boolean;
 }
 
-//     "id": 1,
-//     "active": false,
-//     "stages": 2,
-//     "boosters": 0,
-//     "cost_per_launch": 6700000,
-//     "success_rate_pct": 40,
-//     "first_flight": "2006-03-24",
-//     "country": "Republic of the Marshall Islands",
-//     "company": "SpaceX",
-//     "height": {
-//       "meters": 22.25,
-//       "feet": 73
-//     },
-//     "diameter": {
-//       "meters": 1.68,
-//       "feet": 5.5
-//     },
-//     "mass": {
-//       "kg": 30146,
-//       "lb": 66460
-//     },
-//     "payload_weights": [
-//       {
-//         "id": "leo",
-//         "name": "Low Earth Orbit",
-//         "kg": 450,
-//         "lb": 992
-//       }
-//     ],
+export interface Rocket {
+  rocket_name: string;
+  rocket_type: string;
+}
+
+export interface LaunchSite {
+  site_name: string;
+  site_id: string;
+}
+
+// "flight_number": 111,
+//   "mission_name": "Turksat 5A",
+//   "mission_id": [
+
+//   ],
+//   "launch_year": "2020",
+//   "launch_date_unix": 1601510400,
+//   "launch_date_utc": "2020-10-01T00:00:00.000Z",
+//   "launch_date_local": "2020-09-30T20:00:00-04:00",
+//   "is_tentative": true,
+//   "tentative_max_precision": "quarter",
+//   "tbd": false,
+//   "launch_window": null,
+//   "rocket": {
+//     "rocket_id": "falcon9",
+//     "rocket_name": "Falcon 9",
+//     "rocket_type": "FT",
 //     "first_stage": {
-//       "reusable": false,
-//       "engines": 1,
-//       "fuel_amount_tons": 44.3,
-//       "burn_time_sec": 169,
-//       "thrust_sea_level": {
-//         "kN": 420,
-//         "lbf": 94000
-//       },
-//       "thrust_vacuum": {
-//         "kN": 480,
-//         "lbf": 110000
-//       }
+//       "cores": [
+//         {
+//           "core_serial": null,
+//           "flight": null,
+//           "block": 5,
+//           "gridfins": null,
+//           "legs": null,
+//           "reused": true,
+//           "land_success": null,
+//           "landing_intent": null,
+//           "landing_type": null,
+//           "landing_vehicle": null
+//         }
+//       ]
 //     },
 //     "second_stage": {
-//       "reusable": false,
-//       "engines": 1,
-//       "fuel_amount_tons": 3.38,
-//       "burn_time_sec": 378,
-//       "thrust": {
-//         "kN": 31,
-//         "lbf": 7000
-//       },
-//       "payloads": {
-//         "option_1": "composite fairing",
-//         "composite_fairing": {
-//           "height": {
-//             "meters": 3.5,
-//             "feet": 11.5
-//           },
-//           "diameter": {
-//             "meters": 1.5,
-//             "feet": 4.9
+//       "block": 5,
+//       "payloads": [
+//         {
+//           "payload_id": "Turksat 5A",
+//           "norad_id": [
+
+//           ],
+//           "reused": false,
+//           "customers": [
+//             "Turksat"
+//           ],
+//           "nationality": "Turkey",
+//           "manufacturer": "Airbus Defence and Space",
+//           "payload_type": "Satellite",
+//           "payload_mass_kg": null,
+//           "payload_mass_lbs": null,
+//           "orbit": "GTO",
+//           "orbit_params": {
+//             "reference_system": "geocentric",
+//             "regime": "geostationary",
+//             "longitude": null,
+//             "semi_major_axis_km": null,
+//             "eccentricity": null,
+//             "periapsis_km": null,
+//             "apoapsis_km": null,
+//             "inclination_deg": null,
+//             "period_min": null,
+//             "lifespan_years": 15,
+//             "epoch": null,
+//             "mean_motion": null,
+//             "raan": null,
+//             "arg_of_pericenter": null,
+//             "mean_anomaly": null
 //           }
 //         }
-//       }
+//       ]
 //     },
-//     "engines": {
-//       "number": 1,
-//       "type": "merlin",
-//       "version": "1C",
-//       "layout": "single",
-//       "isp": {
-//         "sea_level": 267,
-//         "vacuum": 304
-//       },
-//       "engine_loss_max": 0,
-//       "propellant_1": "liquid oxygen",
-//       "propellant_2": "RP-1 kerosene",
-//       "thrust_sea_level": {
-//         "kN": 420,
-//         "lbf": 94000
-//       },
-//       "thrust_vacuum": {
-//         "kN": 480,
-//         "lbf": 110000
-//       },
-//       "thrust_to_weight": 96
-//     },
-//     "landing_legs": {
-//       "number": 0,
-//       "material": null
-//     },
+//     "fairings": {
+//       "reused": null,
+//       "recovery_attempt": null,
+//       "recovered": null,
+//       "ship": null
+//     }
+//   },
+//   "ships": [
+
+//   ],
+//   "telemetry": {
+//     "flight_club": null
+//   },
+//   "launch_site": {
+//     "site_id": "ccafs_slc_40",
+//     "site_name": "CCAFS SLC 40",
+//     "site_name_long": "Cape Canaveral Air Force Station Space Launch Complex 40"
+//   },
+//   "launch_success": null,
+//   "links": {
+//     "mission_patch": null,
+//     "mission_patch_small": null,
+//     "reddit_campaign": null,
+//     "reddit_launch": null,
+//     "reddit_recovery": null,
+//     "reddit_media": null,
+//     "presskit": null,
+//     "article_link": null,
+//     "wikipedia": null,
+//     "video_link": null,
+//     "youtube_id": null,
 //     "flickr_images": [
-//       "https://imgur.com/DaCfMsj.jpg",
-//       "https://imgur.com/azYafd8.jpg"
-//     ],
-//     "wikipedia": "https://en.wikipedia.org/wiki/Falcon_1",
-//     "description": "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.",
-//     "rocket_id": "falcon1",
-//     "rocket_name": "Falcon 1",
-//     "rocket_type": "rocket"
+
+//     ]
+//   },
+//   "details": null,
+//   "upcoming": true,
+//   "static_fire_date_utc": null,
+//   "static_fire_date_unix": null,
+//   "timeline": null,
+//   "crew": null
