@@ -9,7 +9,7 @@ import { TableHeaderComponent } from "./table-header/table-header.component";
 import { TableEntityComponent } from "./table-entity/table-entity.component";
 import { PaginationComponent } from "./pagination/pagination.component";
 import { DateTimePipe } from "./date-time.pipe";
-import { RocketService } from "./rocket.service";
+import { LaunchService } from "./launch.service";
 import { DropDownComponent } from "./drop-down/drop-down.component";
 import { HttpClientModule } from "@angular/common/http";
 
@@ -26,6 +26,6 @@ import { HttpClientModule } from "@angular/common/http";
     DropDownComponent
   ],
   bootstrap: [AppComponent],
-  providers: [RocketService]
+  providers: [LaunchService]
 })
 export class AppModule {}
