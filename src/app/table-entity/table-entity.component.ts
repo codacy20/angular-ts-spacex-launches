@@ -27,11 +27,9 @@ export class TableEntityComponent implements OnInit {
 
   mouseEnter(input : any){
       this.active = input;
-      console.log(this.active)
    }
 
    mouseLeave(input : any){
       this.active = null;     
-      console.log(this.active)
    }
 }

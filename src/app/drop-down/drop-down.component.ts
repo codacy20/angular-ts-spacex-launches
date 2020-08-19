@@ -38,6 +38,8 @@ export class DropDownComponent implements OnInit {
   }
 
   clicked(input: number) {
-    console.log(input);
+    // console.log(input);
+    this.title = this.data[input].name;
+    this.active = false;
   }
 }
