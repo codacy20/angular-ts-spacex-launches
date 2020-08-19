@@ -23,13 +23,15 @@ export class PaginationComponent implements OnInit {
   move(input: number) {
     if (input === 0 && this.active > 1 && this.nrOfFlights >= this.active) this.active--;
     if (input === 1 && this.active < this.nrOfFlights && this.nrOfFlights >= this.active) this.active++;
-    console.log(this.active);
     this.definePagination();
+    const res = this.launchService.getLaunchList(this.active, 5);
+    res.subscribe((data: Launch[]) => {
+      this.launchService.data.next(data);
+    });
   }
 
   definePagination() {
     this.pagination = [];
     for (let i = this.active; i < this.nrOfFlights; i++) this.pagination.push(i);
-    console.log(this.pagination)
   }
 }

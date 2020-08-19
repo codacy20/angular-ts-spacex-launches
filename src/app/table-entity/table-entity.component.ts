@@ -18,7 +18,9 @@ export class TableEntityComponent implements OnInit {
     res.subscribe((data: Launch[]) => {
       this.data = data;
       this.launchService.nrOfFlights.next(this.data[0].flight_number);
-      // this.launchService.nrOfFlights.next(4);
+    });
+    this.launchService.data.subscribe(item => {
+      this.data = item;
     });
   }
 }

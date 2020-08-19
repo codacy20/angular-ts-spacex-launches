@@ -8,6 +8,7 @@ export class LaunchService {
   path: string = "https://api.spacexdata.com/v3/launches?order=desc&";
   list: Launch[] = [];
   nrOfFlights: Subject<number> = new Subject<number>();
+  data: Subject<Launch[]> = new Subject<Launch[]>();
 
   getLaunchList(offset: number, limit: number) {
     return this.http.get<Launch[]>(
