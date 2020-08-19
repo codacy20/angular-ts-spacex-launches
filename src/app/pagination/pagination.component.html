@@ -1,17 +1,17 @@
 <div class="pagination">
-	<div class="icons">	
+	<div class="icons" (click)="move(0)">
 		<span class="material-icons">
       keyboard_arrow_left
     </span>
-    <span>Prev</span>
+		<span>Prev</span>
 	</div>
-	<div class="not-icons">1</div>
-	<div class="not-icons">2</div>
-	<div class="not-icons">3</div>	
-	<div class="icons">
-    <span>Next</span>
-    <span class="material-icons">
+	<div class="not-icons" [ngClass]="{'active':active===0}">1</div>
+	<div class="not-icons" [ngClass]="{'active':active===1}">2</div>
+	<div class="not-icons" [ngClass]="{'active':active===2}">3</div>
+	<div class="icons" (click)="move(1)">
+		<span>Next</span>
+		<span class="material-icons">
       keyboard_arrow_right
     </span>
-  </div>
+	</div>
 </div>
