@@ -1,3 +1,3 @@
-# angular-ts-user-table
+# angular-ts-spacex-launches
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ts-user-table)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ts-spacex-launches)
